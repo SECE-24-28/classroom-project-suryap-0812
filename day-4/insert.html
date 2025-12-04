@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert-text</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div>
+        <label class="text-3xl mx-4" for="type">Type here :</label>
+        <input type="text" id="type" class="border-2 border-black rounded-md mx-4 my-16 p-2" placeholder="item-name...">
+        <button id="btn1" class="text-white rounded-md m-4 p-2 bg-black" onclick ="ShowItems()">aluthu</button>
+    </div>
+
+   
+
+    <script>
+        let btn1 = document.getElementById("btn1");
+        let inp = document.getElementById("type");
+       
+        let index = 0;
+        btn1.addEventListener("click", function(){
+            index++;
+            let us = inp.value;
+            let p = document.createElement("p");
+            p.textContent =  `${index}. ` + us;
+            p.className = "text-2xl mx-4 my-2 list-type-disc";
+            document.body.appendChild(p);
+        })
+    </script>
+</body>
+</html>
