@@ -4,7 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App(){
-  let [val, val1] = useState(0)
+  let [val, va1] = useState(0)
   return (
     <>
       <div className="cont nav">
