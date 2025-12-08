@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DigitalClock</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="m-64 text-center bg-gray-200 p-10  border-black rounded-full">
+        <h1 class="text-4xl font-bold font-awesome">Degital Clock</h1>
+        <div class="p-4 bg-gray-400 mx-auto my-2 w-40 rounded-full ">
+            <p></p>
+            <p></p>
+            <p></p>
+        </div>
+        </div>
+    <script>
+        let p = document.getElementsByTagName("p");
+        function clock(){
+            let dt = new Date();
+
+            let h = dt.getHours();
+            let m = dt.getMinutes();
+            let s = dt.getSeconds();
+
+            p[0].textContent = h + ":"+ m + ":" + s;
+            p[0].className = "text-4xl text-black my-4";
+
+         }
+
+        setInterval(clock, 1000);
+
+    </script>
+</body>
+</html>

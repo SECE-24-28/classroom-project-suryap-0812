@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TYPE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="flex justify-center gap-4 mt-32">  
+        <input class="border-4 bg-gray-200 w-64 h-12 text-red-600 font-bold" type="text" id="ip1">
+        <input class="border-4 bg-gray-200 w-64 h-12 text-red-800 font-bold" type="text" id="ip2">
+    </div>
+    
+    <script>
+        let ip1  = document.getElementById("ip1");
+        let ip2  = document.getElementById("ip2");
+
+        ip1.addEventListener("keyup", function() {
+            ip2.value = (ip1.value).toUpperCase();
+        });
+
+    </script>
+</body>
+</html>
+
+<!--
+    
+        let ip = document.getElementById("ip");
+        ip.addEventListener("keyup", function(){
+            let val = data.filter((ep) =>{
+                return ep.title.toLowerCase().includes(ip.value.toLowerCase());
+            });
+            document.querySelector(".res").innerHTML = ""; 
+            val.forEach((val) =>{
+                var p = document.createElement("p");
+                p.innerHTML = `<div class='border-2 border-gray-400 m-2 mx-16 p-2 rounded-lg shadow-lg'>
+                                <h2 class='text-2xl font-bold mb-2'>${val.title}</h2>
+                                <p class='text-gray-700'><b>Email:</b> ${val.email}</p>
+                                <p class='text-gray-700'> <b>City:</b> ${val.City}</p>
+                               </div>`;
+                document.body.appendChild(p);
+            })
+        });
+-->

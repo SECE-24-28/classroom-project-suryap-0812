@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM</title>
+
+    <style>
+        .content {
+            border: 2px solid black;
+            padding: 20px;
+            margin: 10px auto;
+            background-color:lightblue;
+            width: 50vh;
+            display: flex;
+            justify-items: center;
+            font-size: 18px;
+        }
+
+        tr {
+            height: 50px;
+        }
+        td {
+          padding: 10px;
+         }
+
+        button {
+            padding: 10px 20px;
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head
+<body>
+    <div >
+        <h1 style="text-align: center;">Form:-</h1><br>
+        <div class="content">
+            <form action="day_1.html" method="get"> 
+                <table>
+                <tr>
+                   <td><label for="name">Name:</label></td>
+                <td><input type="text" id="name" name="name" placeholder="Enter your name"></td>
+                </tr>
+                <tr>
+                    <td><label for="Dept">Department:</label></td>
+                    <td>
+                        CSE<input type="radio" name="Dept" value="CSE">
+                        ECE<input type="radio" name="Dept" value="ECE">
+                        AIML<input type="radio" name="Dept" value="AIML">
+
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="gender">Gender:</label></td>
+                    <td><input type="radio" name="gender" value="male"> Male
+                    <input type="radio" name="gender" value="female"> Female
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="DOB">DOB:</label></td>
+                    <td><input type="date" id="DOB" name="DOB"></td>
+                </tr>
+                <tr>
+                    <td> <label type="number" for="number"></label>Phone: </td>
+                    <td><input type="number" maxlength="10" pattern="[0-9]{10}" id="number" name="number" placeholder="Enter your phone number"></td>
+                </tr>
+                <tr>
+                    <td><label for="email">Email:</label></td>
+                    <td><input type="email" id="email" name="email" placeholder="Enter your email"></td>
+                </tr>
+                <tr>
+                    <td><label for="textbox">address:</label></td>
+                    <td><textarea id="textbox" name="textbox" rows="4" cols="30" placeholder="Enter your address"></textarea></td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;"><button type="submit">Submit</button></td>
+                </tr>
+            </table>
+        </form>
+           
+        </div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo-List</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="text-center p-4">
+        <h1 class="text-4xl my-4">Simple To-do App</h1>
+        <div class="m-4 inline-block border-2 border-black rounded-md">
+            <input class="p-2 border-2 border-gray-300 rounded-md" id="ip" type="text" placeholder="Enter task">
+            <button class="p-2 bg-blue-500 text-white rounded-md" id="btn1"> Add</button>
+            <button class="p-2 bg-red-500 text-white rounded-md" id="btn2">Clear</button>
+        </div>
+    </div>
+
+    <div class="list p-4"><hr class="text-2xl"></div>
+
+
+    <script>
+        let ip = document.getElementById("ip");
+        let btn1 = document.getElementById("btn1"); 
+        let btn2 = document.getElementById("btn2");
+
+        let index = 0;
+        btn1.addEventListener("click", function(){
+            index++;
+            let  li = document.createElement("p");
+            li.textContent =  index + ". " + ip.value;
+            li.className = "text-2xl font-semibold mx-4 my-2 list-type-disc";
+            document.body.appendChild(li);
+        });
+
+        document.body.addEventListener("dblclick", function(e){
+            if(e.target.tagName === "P"){
+                e.target.style.textDecoration = "line-through";
+                e.target.style.color = "gray-200";
+                e.target.style.opacity = "0.6";
+
+            }
+        });
+
+        btn2.addEventListener("click", function(){
+            document.querySelectorAll("p").forEach(function(p){
+                p.remove();
+            });
+        });
+
+
+    </script>
+</body>
+</html>

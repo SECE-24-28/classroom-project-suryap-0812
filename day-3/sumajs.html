@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SumaJS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen flex items-center justify-center bg-gray-200">
+
+    <form class="bg-black text-white rounded-lg shadow-md w-full max-w-md p-8 flex flex-col gap-5">
+
+        <!-- Row 1 -->
+        <div class="flex justify-between items-center">
+            <label for="ip1">Input - 1 :</label>
+            <input type="number" id="ip1" class="text-black px-2 py-1 rounded">
+        </div>
+
+        <!-- Row 2 -->
+        <div class="flex justify-between items-center">
+            <label for="ip2">Input - 2 :</label>
+            <input type="number" id="ip2" class="text-black px-2 py-1 rounded">
+        </div>
+
+        <!-- Row 3 -->
+        <div class="flex justify-between items-center">
+            <label for="res">Result :</label>
+            <input type="number" id="res" readonly class="text-black px-2 py-1 rounded">
+        </div>
+
+        <!-- Operators -->
+        <div class="flex justify-center gap-6 mt-4">
+            <button type="button" class="rounded-lg bg-white text-black px-3 py-1 text-2xl" onclick="plus()">+</button>
+            <button type="button" class="rounded-lg bg-white text-black px-3 py-1 text-2xl" onclick="minus()">-</button>
+            <button type="button" class="rounded-lg bg-white text-black px-3 py-1 text-2xl" onclick="multiply()">*</button>
+            <button type="button" class="rounded-lg bg-white text-black px-3 py-1 text-2xl" onclick="divide()">/</button>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="button" class="bg-red-500 mt-4 text-white px-4 py-2 rounded-lg self-center" onclick="location.reload()">
+            click!
+        </button>
+
+    </form>
+
+    <script>
+        let ip1 = document.getElementById("ip1");
+        let ip2 = document.getElementById("ip2");
+        let res = document.getElementById("res");
+
+        function plus(){
+            res.value = Number(ip1.value) + Number(ip2.value);
+        }
+
+        function minus(){
+            res.value = Number(ip1.value) - Number(ip2.value);
+        }
+
+        function multiply(){
+            res.value = Number(ip1.value) * Number(ip2.value);
+        }
+
+        function divide(){
+            if(Number(ip2.value) === 0){
+                alert("Cannot divide by zero");
+                return;
+            }
+            res.value = Number(ip1.value) / Number(ip2.value);
+        }
+    </script>
+
+</body>
+</html>
