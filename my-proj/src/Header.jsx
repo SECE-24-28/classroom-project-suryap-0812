@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
+import dataContext from "./dataContext";
 
-const Header = ({ title }) => {
+const Header = () => {
+  const { title } = useContext(dataContext) ?? { title: "" };
   return (
     <div className="header">
       <h1>{title}</h1>

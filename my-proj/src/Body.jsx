@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import dataContext from "./dataContext";
 
-export const Body = ({ list, handleCheck, handleDelete, addStudent }) => {
+export const Body = () => {
+  const { list, handleCheck, handleDelete, addStudent } = useContext(dataContext) ?? {};
   const [name, setName] = useState("");
   const [query, setQuery] = useState("");
 
@@ -11,7 +13,7 @@ export const Body = ({ list, handleCheck, handleDelete, addStudent }) => {
     setName("");
   };
 
-  const displayed = list.filter((ls) =>
+  const displayed = (list || []).filter((ls) =>
     ls.sname.toLowerCase().includes(query.trim().toLowerCase())
   );
 

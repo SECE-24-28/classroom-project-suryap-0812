@@ -3,6 +3,7 @@ import "./App.css";
 import Header from "./Header";
 import { Body } from "./Body";
 import { Footer } from "./Footer";
+import dataContext from "./dataContext";
 
 function App() {
   const [list, setList] = useState([
@@ -28,21 +29,20 @@ function App() {
     setList((prev) => [student, ...prev]);
   };
 
-  const handleAddStudent = (sname) => {
-    const newStudent = {
-      id: list.length + 1,
-      sname: sname,
-      fee: false,
-    };
-    setList([...list, newStudent]);
-  }
+  const contextValue = {
+    title: "Student List",
+    list,
+    handleCheck,
+    handleDelete,
+    addStudent,
+  };
 
   return (
-    <>
-      <Header title="Student List" />
-      <Body list={list} handleCheck={handleCheck} handleDelete={handleDelete} addStudent={addStudent} />
-      <Footer len={list.length} />
-    </>
+    <dataContext.Provider value={contextValue}>
+      <Header />
+      <Body />
+      <Footer />
+    </dataContext.Provider>
   );
 }
 
