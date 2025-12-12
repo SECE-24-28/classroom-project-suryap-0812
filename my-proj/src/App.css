@@ -1,0 +1,51 @@
+/* App styles for Student List components */
+
+:root{
+  --bg:#f7f9fc;
+  --card:#fff;
+  --muted:#6b7280;
+  --accent:#2563eb;
+  --danger:#dc2626;
+}
+
+body{
+  margin:0;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background:var(--bg);
+  color:#111827;
+}
+
+.header{
+  background:linear-gradient(90deg,#eef2ff,#fff);
+  padding:18px 24px;
+  border-bottom:1px solid #e6e9ef;
+}
+.header h1{margin:0;font-size:1.6rem}
+.header hr{margin-top:10px;border:0;height:1px;background:#e6e9ef}
+
+.body{padding:20px 24px}
+.student-list{list-style:none;padding:0;margin:0;max-width:640px}
+.student-item{display:flex;align-items:center;gap:12px;background:var(--card);padding:10px 12px;margin-bottom:10px;border-radius:8px;box-shadow:0 1px 2px rgba(16,24,40,0.03)}
+.student-checkbox{width:18px;height:18px}
+.student-label{flex:1;font-weight:500}
+.delete-btn{background:var(--danger);color:#fff;border:0;padding:6px 10px;border-radius:6px;cursor:pointer}
+.delete-btn:hover{opacity:0.95}
+
+.footer{padding:16px 24px;border-top:1px solid #e6e9ef;background:transparent}
+.footer h1{margin:0;font-size:1rem;color:var(--muted)}
+
+/* small responsive */
+@media (max-width:520px){
+  .student-item{padding:10px}
+}
+
+/* Add student form styles */
+.add-form{display:flex;gap:8px;align-items:center;margin-bottom:14px;max-width:640px}
+.add-input{flex:1;padding:8px 10px;border:1px solid #e6e9ef;border-radius:8px;background:#fff}
+.add-btn{background:var(--accent);color:#fff;border:0;padding:8px 12px;border-radius:8px;cursor:pointer}
+.add-btn:hover{opacity:0.95}
+
+/* search */
+.search-row{max-width:640px;margin-bottom:12px}
+.search-input{width:100%;padding:8px 10px;border-radius:8px;border:1px solid #e6e9ef;background:#fff}
+.no-results{background:transparent;color:var(--muted);padding:12px;border-radius:8px}

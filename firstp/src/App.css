@@ -1,0 +1,61 @@
+.nav{
+  background-color: hwb(0 90% 10%);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 6px;
+  margin-right: 6px;
+}
+
+img{
+  animation: rot 2s linear infinite;
+}
+
+@keyframes rot {
+ 0%{
+    transform: rotate(0deg);
+ 
+  }
+  
+  20%{
+    transform: rotate(72deg);
+  }
+
+  40%{
+    transform: rotate(144deg);
+  }
+  60%{
+    transform: rotate(216deg);
+  }
+  80%{
+    transform: rotate(288deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+.nav-items{
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  flex-direction: row;
+  font-size: large;
+  margin-right: 4px;
+}
+.nav-items li {
+  transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.nav-items li:hover {
+  color: red; /* Change color on hover */
+}
+
+
+.cont {
+  box-shadow: 20px 20px 20% red;
+  background-color: hwb(0 90% 10%);
+  border-radius: 10px; /* Rounded corners for the container */
+}
+
