@@ -15,7 +15,10 @@ export default function Feedbacks({ post = [] }) {
           <p className="meta">{p.name}</p> 
           <p>{p.email}</p>
           <p>{p.message}</p>
+<<<<<<< HEAD
           <a href={`/editpost/${p.id}`}>Edit</a>
+=======
+>>>>>>> 53460a660aa50b4f90153212fd9a502a48c2ba1d
         </article>
       ))}
     </div>

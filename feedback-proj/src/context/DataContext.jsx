@@ -8,6 +8,10 @@ export function DataProvider({ children }) {
   const [search, setSearch] = useState("")
   const [result, setResult] = useState([])
 
+<<<<<<< HEAD
+=======
+  // fetch posts
+>>>>>>> 53460a660aa50b4f90153212fd9a502a48c2ba1d
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -20,12 +24,17 @@ export function DataProvider({ children }) {
     fetchData()
   }, [])
 
+<<<<<<< HEAD
+=======
+  // update filtered results when posts or search changes
+>>>>>>> 53460a660aa50b4f90153212fd9a502a48c2ba1d
   useEffect(() => {
     const q = (search || '').trim().toLowerCase()
     if (!q) {
       setResult(posts)
       return
     }
+<<<<<<< HEAD
     const filtered = posts.filter((p) => (p.title).toLowerCase().includes(q))
     setResult(filtered)
   }, [posts, search])
@@ -33,12 +42,25 @@ export function DataProvider({ children }) {
   const addPost = async ({ name, email, title, message }) => {
     // const id = posts.length ? posts[posts.length - 1].id + 1 : 1
     const id = posts.length + 1
+=======
+    const filtered = posts.filter((p) => (p.title || '').toLowerCase().includes(q))
+    setResult(filtered)
+  }, [posts, search])
+
+  // add post helper
+  const addPost = async ({ name, email, title, message }) => {
+    const id = posts.length ? posts[posts.length - 1].id + 1 : 1
+>>>>>>> 53460a660aa50b4f90153212fd9a502a48c2ba1d
     const datetime = new Date().toISOString()
     try {
       const newPost = { id, name, email, title, message, datetime }
       const res = await api.post('/feedback', newPost)
       const updated = [...posts, res.data]
       setPosts(updated)
+<<<<<<< HEAD
+=======
+      // update result based on current search
+>>>>>>> 53460a660aa50b4f90153212fd9a502a48c2ba1d
       const q = (search || '').trim().toLowerCase()
       if (!q) setResult(updated)
       else setResult(updated.filter((p) => (p.title || '').toLowerCase().includes(q)))
@@ -49,6 +71,7 @@ export function DataProvider({ children }) {
     }
   }
 
+<<<<<<< HEAD
   const editPost = async (id, updates) => {
     try {
       const existing = posts.find((p) => String(p.id) === String(id))
@@ -82,6 +105,8 @@ export function DataProvider({ children }) {
     }
   }
 
+=======
+>>>>>>> 53460a660aa50b4f90153212fd9a502a48c2ba1d
   const value = {
     posts,
     result,
@@ -89,8 +114,11 @@ export function DataProvider({ children }) {
     setSearch,
     addPost,
     setPosts,
+<<<<<<< HEAD
     editPost,
     deletePost,
+=======
+>>>>>>> 53460a660aa50b4f90153212fd9a502a48c2ba1d
   }
 
   return <DataContext.Provider value={value}>{children}</DataContext.Provider>

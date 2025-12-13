@@ -15,6 +15,10 @@ export default function AddPost() {
     e.preventDefault()
     if (!title.trim()) return alert('Title is required')
     setLoading(true)
+<<<<<<< HEAD
+=======
+    try {
+>>>>>>> 53460a660aa50b4f90153212fd9a502a48c2ba1d
       await addPost({ name, email, title, message })
       // reset local fields
       setName('')
@@ -22,12 +26,25 @@ export default function AddPost() {
       setTitle('')
       setMessage('')
       navigate('/fb')
+<<<<<<< HEAD
     alert('Feedback added successfully!')
+=======
+    } catch (err) {
+      console.error('Failed to add post', err)
+      alert('Failed to add post')
+    } finally {
+      setLoading(false)
+    }
+>>>>>>> 53460a660aa50b4f90153212fd9a502a48c2ba1d
   }
 
   return (
     <section className="add-post">
+<<<<<<< HEAD
     <h2>Add Feedback</h2>
+=======
+      <h2>Add Feedback</h2>
+>>>>>>> 53460a660aa50b4f90153212fd9a502a48c2ba1d
       <form onSubmit={handleSubmit}>
         <label>
           Title
@@ -45,7 +62,11 @@ export default function AddPost() {
           Message
           <textarea value={message} onChange={(e) => setMessage(e.target.value)} />
         </label>
+<<<<<<< HEAD
         <button type="submit" >
+=======
+        <button type="submit" disabled={loading}>
+>>>>>>> 53460a660aa50b4f90153212fd9a502a48c2ba1d
           {loading ? 'Adding...' : 'Add Feedback'}
         </button>
       </form>

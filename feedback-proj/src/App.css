@@ -15,16 +15,25 @@
 
 body {
   margin: 0;
+<<<<<<< HEAD
+=======
+  font-family: "Inter", sans-serif;
+>>>>>>> 53460a660aa50b4f90153212fd9a502a48c2ba1d
   background: var(--bg);
   color: var(--text);
 }
 
 .app-header {
+<<<<<<< HEAD
   padding: 4px;
+=======
+  padding: 16px 20px;
+>>>>>>> 53460a660aa50b4f90153212fd9a502a48c2ba1d
   text-align: center;
   background: #fff;
   box-shadow: var(--shadow);
   margin-bottom: 20px;
+<<<<<<< HEAD
   position: fixed;
   top: 0;
   left: 0;
@@ -37,6 +46,11 @@ body {
   align-items: center;
   /* justify-content: space-evenly; */
   gap: 10px;
+=======
+   position: fixed;
+  margin-top: 0;
+  width: 100%;
+>>>>>>> 53460a660aa50b4f90153212fd9a502a48c2ba1d
 }
 
 .app-header h1 {
@@ -71,7 +85,11 @@ body {
 
 
 #search-box {
+<<<<<<< HEAD
   margin: 2px auto;
+=======
+  margin: 16px auto;
+>>>>>>> 53460a660aa50b4f90153212fd9a502a48c2ba1d
   display: block;
   width: 90%;
   max-width: 360px;
@@ -122,6 +140,7 @@ body {
   color: var(--muted);
 }
 
+<<<<<<< HEAD
 .feed-meta {
   display:flex;
   gap:12px;
@@ -136,6 +155,8 @@ body {
 
 .feed-message{margin-top:8px;color:#0f172a}
 
+=======
+>>>>>>> 53460a660aa50b4f90153212fd9a502a48c2ba1d
 .add-post {
   max-width: 600px;
   margin: 16px auto;
@@ -143,15 +164,21 @@ body {
   background: #fff;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
+<<<<<<< HEAD
   display: flex;
   flex-direction: column;
   align-items: center;
+=======
+>>>>>>> 53460a660aa50b4f90153212fd9a502a48c2ba1d
 }
 
 .add-post form {
   display: flex;
   flex-direction: column;
+<<<<<<< HEAD
   align-items: center;
+=======
+>>>>>>> 53460a660aa50b4f90153212fd9a502a48c2ba1d
   gap: 10px;
 }
 
@@ -167,6 +194,7 @@ body {
 
 .add-post input:focus,
 .add-post textarea:focus {
+<<<<<<< HEAD
   border-color: var(--accent);
   box-shadow: var(--shadow);
   padding: 20px;
@@ -174,6 +202,11 @@ body {
 
 .add-post:focus-within label {
   font-size: 22px;
+=======
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: var(--shadow);
+>>>>>>> 53460a660aa50b4f90153212fd9a502a48c2ba1d
 }
 
 .add-post textarea {
@@ -184,13 +217,20 @@ body {
 .add-post button {
   padding: 10px;
   border-radius: var(--radius);
+<<<<<<< HEAD
   background: linear-gradient(90deg,var(--accent), #7c3aed);
+=======
+  background: var(--accent);
+>>>>>>> 53460a660aa50b4f90153212fd9a502a48c2ba1d
   border: none;
   color: white;
   font-weight: 600;
   cursor: pointer;
   transition: 0.2s;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 53460a660aa50b4f90153212fd9a502a48c2ba1d
 }
 
 .add-post button:hover {
@@ -205,6 +245,7 @@ p {
 }
 
 .app-main {
+<<<<<<< HEAD
   max-width: 100%;
   margin: 200px auto auto; /* leave space for fixed header */
   padding: 0px 16px 40px;
@@ -240,3 +281,8 @@ body {
   margin-right: 20px;
   margin-top: 20px;
 }
+=======
+  padding-top: 100px; /* To offset the fixed header height */
+  padding-bottom: 20px;
+}
+>>>>>>> 53460a660aa50b4f90153212fd9a502a48c2ba1d
