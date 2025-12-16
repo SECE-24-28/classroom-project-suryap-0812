@@ -1,0 +1,71 @@
+{
+  "feedback": [
+    {
+<<<<<<< HEAD
+      "id": "1",
+      "title": "Movie",
+      "name": "Suryap",
+      "email": "surya@gmail.com",
+      "message": "Mokka padam!!\nama ama",
+      "datetime": "2024-06-10T10:00:00Z"
+    },
+    {
+      "id": "2",
+=======
+      "id": 1,
+      "title": "Movie",
+      "name": "Surya",
+      "email": "surya@gmail.com",
+      "message": "Mokka padam!!",
+      "datetime": "2024-06-10T10:00:00Z"
+    },
+    {
+      "id": 2,
+>>>>>>> 53460a660aa50b4f90153212fd9a502a48c2ba1d
+      "title": "Movi",
+      "name": "Ranjan",
+      "email": "ranjan@gmail.com",
+      "message": "Etho sariyaga illa!!",
+      "datetime": "2024-06-11T12:30:00Z"
+    },
+    {
+<<<<<<< HEAD
+      "id": "4",
+=======
+      "id": 3,
+      "name": "new-user",
+      "email": "user1@gmail.com",
+      "title": "TTTt",
+      "message": "weiffnwifn",
+      "datetime": "2025-12-11T09:17:35.435Z"
+    },
+    {
+      "id": 4,
+>>>>>>> 53460a660aa50b4f90153212fd9a502a48c2ba1d
+      "name": "shreya",
+      "email": "sh@gmail.cmd",
+      "title": "TITOO",
+      "message": "woifnnwf",
+      "datetime": "2025-12-11T09:20:05.287Z"
+<<<<<<< HEAD
+    },
+    {
+      "id": "5",
+      "name": "Sasi",
+      "email": "sasi@gmail.com",
+      "title": "Tirupur",
+      "message": "aorgowpocivovb",
+      "datetime": "2025-12-12T03:32:59.085Z"
+    },
+    {
+      "id": "6",
+      "name": "Sathish",
+      "email": "sathish",
+      "title": "Sathish",
+      "message": "s a t h i s h ",
+      "datetime": "2025-12-12T05:44:14.663Z"
+=======
+>>>>>>> 53460a660aa50b4f90153212fd9a502a48c2ba1d
+    }
+  ]
+}
